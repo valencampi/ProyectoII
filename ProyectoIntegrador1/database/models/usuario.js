@@ -1,7 +1,7 @@
 module.exports= function(squelize, DataTypes) {
     const usuario = squelize.define(
         
-        'Usuario',
+        'Usuarios',
         { 
           nombre: DataType.STRING,
           email: DataType.STRING,
