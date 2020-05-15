@@ -1,6 +1,6 @@
-module.exports={
+module.exports= 
+{
   "development": {
-    //aca tdos deveriamos tener xamp, sino vemos como hacemos 
     "username": "root",
     "password": null,
     "database": "usuarios",
