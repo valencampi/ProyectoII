@@ -3,7 +3,7 @@ module.exports = {
         res.render('registro')
        },
     
-     registro:function(req, res){
-         res.send('')
-     }
+    //  registro:function(req, res){
+    //      res.send('')
+    //  }
 }

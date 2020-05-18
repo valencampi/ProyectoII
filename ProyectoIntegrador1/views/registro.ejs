@@ -6,7 +6,7 @@
 	<title>Formulario para crear películas</title>
 </head>
 <body>
-	<form action="/movies/store" method="post">
+	<form action="/" method="post">
 		<label>Usuario:</label>
 		<input type="text" name="title">
 		<br>
@@ -22,17 +22,8 @@
 		<label>Fecha de nacimiento:</label>
 		<input type="date" name="length">
 		<br>
-		
-		<!-- <label>Id de Género:</label>
-		<select name="genre_id" id="">
-			<% for( let i = 0; i < listadoDeGeneros.length; i++ ) { %>
-			<option value="<%= listadoDeGeneros[i].id %>"> <%= listadoDeGeneros[i].name %> </option>
-			<% } %>
-		</select>
-		<br>
-
-		<br> -->
-		<button type="submit">GUARDAR</button>
+	
+		<button type="submit">Crear Usuario</button>
 	</form>
 </body>
 </html>
