@@ -3,7 +3,7 @@ module.exports=
   "development": {
     "username": "root",
     "password": null,
-    "database": "usuarios",
+    "database": "proyecto-prog-ii",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
