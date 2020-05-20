@@ -6,14 +6,16 @@ module.exports = {
         res.render('registro')
        },
     
-    registrado: (req, res) => {
+    registrado: (req, res) =>{
+      res.send (req.body);
+      
         DB.Usuarios.create(req.body)
         .then(function(index){
-            return res.redirect('/')
+            return res.redirect('/Usuarios');
         })
         .catch(function(error){
             return res.send(error);
-        })
+        }) 
         
     },
 };
