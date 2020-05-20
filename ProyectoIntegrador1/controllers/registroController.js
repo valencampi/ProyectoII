@@ -7,11 +7,11 @@ module.exports = {
        },
     
     registrado: (req, res) =>{
-      res.send (req.body);
+      
       
         DB.Usuarios.create(req.body)
         .then(function(index){
-            return res.redirect('/Usuarios');
+            return res.redirect('/')
         })
         .catch(function(error){
             return res.send(error);
