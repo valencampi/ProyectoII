@@ -19,6 +19,8 @@
             <a href="/"">
               <li class="li1">Inicio</li>
             </a>
+            <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Registrarse</button>
+            </li> 
             <!-- <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Log in</button>
             </li> -->
             <a href="/generos">
@@ -109,32 +111,48 @@
       <button class="recomendaciones uk-button uk-button-text" type="button" name="button">Tambien podría interesarte</button>
       <ul class="display-none recomen">
       </ul>
-    </section>
+    <br>
     
-    <section>
-      <form class="formulario" action="/reseña/reseñaGuradada" method="post" style="border:1px solid #ccc">
+      <form class="formulario" action="/" method="post" style="border:1px solid #ccc">
         <div class="container">
           <h1>Reseñas</h1>
-          <p>Dejanos tu reseña</p>
+          <p>Dejanos tu reseña de esta película</p>
+              
+          <label><b>Mail:</b></label>      
+          <input class='mail' type="email" placeholder="Ingresar correo electrónico" name="email" required>
           <br>
+        
           
-          <label><b>Mail:</b></label>
-          <br>
-          <input class='mail' type="email" placeholder="Ingesar correo electrónico" name="email" required>
-          <br>
-          <br>
-          
-          <label><b>Constraseña:</b></label>
-          <input type="password" name="pasword" required>
+          <label><b>Contraseña:</b></label>
+          <input type="password" placeholder="Ingresar contraseña" name="pasword" required>
           <br>
           
           <label><b>Reseña:</b></label>
-          <input type="text" name="texto" required>
+          <input type="text" placeholder="Deje su reseña" name="texto" required>
 
           <br>
+
+          <label><b>Puntaje</b> </label>
+          <select class="" name="puntaje">
+            <option value="" selected disabled>Elegir</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+            <option value="">6</option>
+            <option value="">7</option>
+            <option value="">8</option>
+            <option value="">9</option>
+            <option value="">10</option>
+          </select> 
+
+          <br>
+          <br>
         
-          <button type="submit"> Submit </button>
-      
+          <button type="submit"> Enviar </button>
+          <br>
+          <br>
         
         </form>
     </section>

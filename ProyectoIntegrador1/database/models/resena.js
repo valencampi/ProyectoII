@@ -1,5 +1,5 @@
-module.exports= function(squelize, DataTypes) {
-    const usuario = squelize.define(
+module.exports= function(sequelize, DataTypes) {
+    const resena = sequelize.define(
         
         'Reseñas',
         { 
@@ -8,7 +8,7 @@ module.exports= function(squelize, DataTypes) {
           pasword: DataTypes.STRING,
           texto: DataTypes.STRING,
           puntaje: DataTypes.DECIMAL,
-          fecha_de_creacion: DataTypes.DAYTIME
+          fecha_de_creacion: DataTypes.DATE
         },
 
         {
@@ -16,4 +16,5 @@ module.exports= function(squelize, DataTypes) {
             timestamps: false,
         }
     );
-    return reseña;
+    return resena;
+}

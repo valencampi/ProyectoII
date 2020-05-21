@@ -36,4 +36,4 @@ let moduloLogin = {
 }
 
 
-module.exports = moduloLogin;
+module.exports = ModuloLogin;

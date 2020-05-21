@@ -84,7 +84,7 @@ nav.encabezado{
   font-weight: 300;
 }
 
-/* li.logIn {
+li.logIn {
   float: right;
   list-style-type: none;
   text-align: center;
@@ -92,9 +92,9 @@ nav.encabezado{
   color: white;
 } */
 
-/* li.logInMq {
+li.logInMq {
   display: none
-} */
+}
 
 form input{
   margin-bottom: 15px
@@ -158,7 +158,6 @@ footer{
   left: 5px;
 }
 
-////////////////////////
 
 nav.mqMobile{
   display: none;
