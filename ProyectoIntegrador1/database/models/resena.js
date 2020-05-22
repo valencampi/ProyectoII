@@ -1,11 +1,10 @@
 module.exports= function(sequelize, DataTypes) {
     const resena = sequelize.define(
         
-        'Reseñas',
+        'Resenas',
         { 
-          
-          email: DataTypes.STRING,
-          pasword: DataTypes.STRING,
+          id_Pelicula: DataTypes.DECIMAL,
+          id_usuario: DataTypes.DECIMAL,
           texto: DataTypes.STRING,
           puntaje: DataTypes.DECIMAL,
           fecha_de_creacion: DataTypes.DATE

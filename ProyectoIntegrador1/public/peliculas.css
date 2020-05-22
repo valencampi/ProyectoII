@@ -96,6 +96,12 @@ form input{
   margin-bottom: 15px
 }
 
+.resenas{
+  width: 80px !important;
+  height: 80px !important;
+}
+
+
 li.buscador{
   float: right;
   list-style-type: none;
@@ -251,7 +257,6 @@ footer{
   left: 5px;
 }
 
-////////////////////////
 
 .dis-none{
     display: none;
@@ -280,9 +285,7 @@ footer{
     display: none;
 
   }
-  .logo{
-    display: ;
-  }
+  
 
   @media screen and (max-width:768px){
 
@@ -437,4 +440,5 @@ footer{
         width: 100%;
       }
 
+     
 }

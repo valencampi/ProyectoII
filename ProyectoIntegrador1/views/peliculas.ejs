@@ -113,7 +113,7 @@
       </ul>
     <br>
     
-      <form class="formulario" action="/" method="post" style="border:1px solid #ccc">
+      <form class="formulario" action="/peliculas/resena/<%= idPeli %>" method="post" style="border:1px solid #ccc">
         <div class="container">
           <h1>Reseñas</h1>
           <p>Dejanos tu reseña de esta película</p>
@@ -124,11 +124,11 @@
         
           
           <label><b>Contraseña:</b></label>
-          <input type="password" placeholder="Ingresar contraseña" name="pasword" required>
+          <input type="password" placeholder="Ingresar contraseña" name="password" required>
           <br>
           
           <label><b>Reseña:</b></label>
-          <input type="text" placeholder="Deje su reseña" name="texto" required>
+          <input class="resenas"type="message"  placeholder="Deje su reseña" name="texto" required>
 
           <br>
 

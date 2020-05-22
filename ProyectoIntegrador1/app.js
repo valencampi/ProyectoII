@@ -12,6 +12,8 @@ const PeliculasPreferidasRouter = require ('./routes/PeliculasPreferidas');
 const pelicularPorGeneroRouter = require ('./routes/pelicularPorGenero');
 const resultadoRouter = require ('./routes/resultado');
 const registroRouter = require ('./routes/registro');
+const resenaRouter = require ('./routes/resena');
+
 
 var app = express();
 
@@ -33,7 +35,7 @@ app.use('/PeliculasPreferidas', PeliculasPreferidasRouter);
 app.use('/pelicularPorGenero', pelicularPorGeneroRouter);
 app.use('/resultado', resultadoRouter);
 app.use('/registro', registroRouter);
-
+app.use('/peliculas', resenaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

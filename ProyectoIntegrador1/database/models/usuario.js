@@ -5,7 +5,7 @@ module.exports= function(squelize, DataTypes) {
         { 
           nombre: DataTypes.STRING,
           email: DataTypes.STRING,
-          pasword: DataTypes.STRING,
+          password: DataTypes.STRING,
           edad: DataTypes.DECIMAL,
           fecha_de_nacimiento: DataTypes.DECIMAL, //aca node que va
         },
