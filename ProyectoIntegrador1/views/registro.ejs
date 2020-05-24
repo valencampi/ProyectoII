@@ -3,6 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/uikit.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit-core-rtl.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="registro.css">
 	<link rel="stylesheet" href="inicio.css">
 	<title>Formulario para crear Usuario</title>
@@ -18,10 +22,6 @@
 			  <a href="/">
 				<li class="li1">Inicio</li>
 			  </a>
-			  <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Registrarse</button>
-			  </li> 
-			  <!-- <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Log in</button>
-			  </li> -->
 			  <a href="/generos">
 				<li class="li1">Géneros</li>
 			  </a>
@@ -32,7 +32,7 @@
 			  <li class="buscador">
 				<form class="buscador1" action="/resultado" method="get">
 				  <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador">
-				  <button class='Botonverde' type="submit">Buscar</button>
+				  <button type="submit">Buscar</button>
 				</form>
 			  </li>
 			  
@@ -84,7 +84,7 @@
 	<div class= 'cuerpo'>
 	<form class="formulario" action="/registro/registrado" method="post" style="border:1px solid #ccc">
 	<div class="container">
-		<h1>Crear Usuario</h1>
+		<h1>Registrarse</h1>
 		<p>Completa los casilleros para crear tu usuario</p>
 		<hr>
 		<label><b>Usuario:</b></label>
@@ -93,23 +93,62 @@
 		
 		<label><b>Mail:</b></label>
 		<br>
-		<input class='mail' type="email" placeholder="Ingesar correo electrónico" name="email" required>
-		<br>
+		<input class='mail' type="email" placeholder="Ingresar correo electrónico" name="email" required>
 		<br>
 		
-		<label><b>Constraseña:</b></label>
+		<label><b>Contraseña:</b></label>
 		<input type="password" name="pasword" required>
 		<br>
 		
 		<label><b>Fecha de nacimiento:</b></label>
-		<input type="date" name="fecha_de_nacimiento" required>
+		<input class="nacimiento" type="date" name="fecha_de_nacimiento" required>
 		<br>
+
+		<label><b>¿Cuál es tu género de pelicula favorito?</b></label>
+		<select class="genero" name="genero" id="">
+			<option value="nada" selected disabled>Elegir</option>
+			<option value="accion">Action</option>
+			<option value="aventura">Adventure</option>
+			<option value="animacion">Animation</option>
+			<option value="comedia">Comedy</option>
+			<option value="crimen">Crime</option>
+			<option value="documental">Documentary</option>
+			<option value="drama">Drama</option>
+			<option value="familia">Family</option>
+			<option value="fantasia">Fantasy</option>
+			<option value="historia">History </option>
+			<option value="terror">Horror</option>
+			<option value="musca">Music</option>
+			<option value="misterio">Mystery</option>
+			<option value="romance">Romance</option>
+			<option value="ciencia ficcion">Science Fiction</option>
+			<option value="TV">TV Movie</option>
+			<option value="thriller">Thriller</option>
+			<option value="guerra">War</option>
+			<option value="western">Western</option>
+			</select>
 	
-		<button type="submit">Crear Usuario</button>
+	
+		<button class="usuario" type="submit">Crear Usuario</button>
 
 	
 	</form>
 </div>
 </div>
+
+<br>
+<br>
+
+<footer>
+	<nav class="final">
+	  <img class="movie" src="logomovies.png" alt="">
+	  <ul class="ul2">
+		<li class="li2">Maitena Galindez</li>
+		<li class="li2">Valentina Campitelli</li>
+		<li class="li2">Marcos Estrada</li>
+	  </ul>
+	</nav>
+  </footer>
 </body>
+
 </html>

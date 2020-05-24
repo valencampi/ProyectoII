@@ -92,15 +92,6 @@ li.logIn {
   color: white;
 }
 
-form input{
-  margin-bottom: 15px
-}
-
-.resenas{
-  width: 80px !important;
-  height: 80px !important;
-}
-
 
 li.buscador{
   float: right;
@@ -221,6 +212,51 @@ button.recomendaciones{
   font-size: 16px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: black;
+}
+
+/* resenas */
+button.resena{
+  background-color: yellow;
+  color: black;
+  width: 100%;
+}
+
+input{
+  width: 50%;
+  margin-left: 15px;
+}
+
+b{
+  margin-left: 15px;
+}
+
+form input{
+  margin-bottom: 15px;
+}
+
+.resenas{
+  height: 80px !important;
+}
+
+select.puntaje{
+  width: 50%;
+  margin-left: 15px;
+}
+
+p.deja{
+  margin-left: 8px;
+}
+
+button.final{
+  margin-left: 15px;
+  width: 80px;
+  font-family:'Julius Sans One', sans-serif;
+  font-weight: bold;
+}
+
+h1.titulo{
+  color: white;
+  font-size: 25px;
 }
 
 /* footer */

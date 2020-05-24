@@ -1,90 +1,27 @@
-/*header*/
+*{box-sizing: border-box;
+  margin-bottom: 20px; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+  
+  }
+  
 
-body{
-    background-color: darkgray;
-}
 
-
-header{
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    align-items: center;
-  }
-  
-  nav.encabezado{
-    overflow: hidden;
-    background-color: #262626;
-    height: 14%;
-    z-index: 3;
-    position: fixed;
-    width: 100%;
-  }
-  
-  nav.mqMobile{
-    display: none;
-  }
-  
-  .header{
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-  
-  .logo {
-    margin-right: 40px;
-    height: 70px;
-    width: 70px;
-    float: left;
-    z-index: 3;
-    border: 2px solid black;
-    border-radius: 35px;
-  }
-  
-  .nav {
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .linkss{
+  /* .linkss{
       display: flex;
       align-items: center;
-  }
+  } */
   
-  .li1 {
-    list-style-type: none;
-    text-align: center;
-    padding: 15px;
-    color: white;
-    float: left;
-    font-size: 25px;
-    font-family: 'Julius Sans One', sans-serif;
-    font-weight: 300;
-  }
+
   
-  li.logIn {
-    float: right;
-    list-style-type: none;
-    text-align: center;
-    padding: 15px;
-    color: white;
-  }
-  
-  li.logInMq {
-    display: none
-  }
-  
-  .buscador1{
+  /* .buscador1{
       display: flex;
       align-items: center;
 
-  }
+  } */
 
   .botonverde{
       margin: auto;
   }
+
 
   li.buscador{
     float: right;
@@ -95,17 +32,27 @@ header{
     
   }
   
-  
-  .resultado{
-    margin: 15px;
-    height: 42px;
+  .botonBuscar{
+    display: none;
   }
 
+  
+form input{
+  margin-bottom: 15px
+}
 
+li.buscador{
+  float: right;
+  list-style-type: none;
+  text-align: center;
+  padding: 15px;
+  color: white;
 
+}
 
-
-
+li.li1{
+  margin-top: 20px !important;
+}
 
 
 /* Full-width input fields */
@@ -117,6 +64,33 @@ header{
   display: inline-block;
   border: none;
   background: #f1f1f1;
+}
+
+input.mail{
+  width: 95.5%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input.nacimiento{
+  width: 95.5%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+select.genero{
+    width: 95.5%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
 }
 
 .cuerpo{
@@ -161,7 +135,7 @@ hr {
 }
 
 /* Set a style for all buttons */
-button {
+button.usuario {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -193,3 +167,37 @@ button:hover {
   padding: 16px;
 }
 
+
+/* footer */
+footer{
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  background-color: #F3EDED;
+}
+
+.final{
+  background-color: white;
+}
+
+.li2 {
+  float: right;
+  list-style-type: none;
+  text-align: center;
+  color: black;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.movie {
+  height: 40px;
+  float: left;
+  position: absolute;
+  top: 9px;
+  left: 5px;
+}

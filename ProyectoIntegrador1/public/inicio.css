@@ -35,6 +35,8 @@ header{
   overflow: hidden;
   position: relative;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 nav {
@@ -120,7 +122,7 @@ li.buscador{
   font-family: 'Julius Sans One', sans-serif;
   font-weight: bolder;
   font-size: 18px;
-  margin-top: -88px;
+  /* margin-top: -88px; */
 }
 
 
@@ -190,8 +192,15 @@ nav.mqMobile{
 
 
   }
+
   .logo{
-    display: ;
+  margin: 10px;
+  height: 70px;
+  width: 70px;
+  float: left;
+  z-index: 3;
+  border: 2px solid black;
+  border-radius: 35px;
   }
 
 @media screen and (max-width:768px){

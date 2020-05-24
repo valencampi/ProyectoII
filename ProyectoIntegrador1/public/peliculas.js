@@ -127,13 +127,20 @@ fetch(url)
   })
 
 // Que se abran las recomendaciones
-  var recom = document.querySelector ('button.recomendaciones')
-  recom.addEventListener ("click", function() {
+  var recomen = document.querySelector ('button.recomendaciones')
+  recomen.addEventListener ("click", function() {
     // cuando clickeas en el boton se abren las recomendaciones
   var ul = document.querySelector("ul.recomen")
   ul.classList.toggle("display-none")
 })
 
+// Que se abran la resenas
+var rese = document.querySelector ('button.resena')
+rese.addEventListener ("click", function() {
+  // cuando clickeas en el boton se abren las resenas
+var ul = document.querySelector("ul.rese")
+ul.classList.toggle("display-none")
+})
 
 //Media query event handler
   if(matchMedia){
