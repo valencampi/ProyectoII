@@ -7,8 +7,7 @@ module.exports = {
         res.render('peliculas')
        },  
 
-    
-    
+    //crear una resena
     resena: (req, res) =>{
         moduloLogin.validar(req.body.email, req.body.password)
     .then(resultado=> {
@@ -27,9 +26,6 @@ module.exports = {
         }) 
 
     })
-            
-       
-        
-        
     },
+
 };

@@ -7,11 +7,11 @@ module.exports= function(sequelize, DataTypes) {
           id_usuario: DataTypes.DECIMAL,
           texto: DataTypes.STRING,
           puntaje: DataTypes.DECIMAL,
-          fecha_de_creacion: DataTypes.DATE
+          fecha_de_creacion: DataTypes.DATE,
         },
 
         {
-            TableName:'reseñas', 
+            tableName:'resenas', 
             timestamps: false,
         }
     );

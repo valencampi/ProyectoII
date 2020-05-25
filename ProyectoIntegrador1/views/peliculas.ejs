@@ -117,6 +117,11 @@
       </ul>
     <br>
     
+    <button class="otras uk-button uk-button-text" type="button" name="button">Reseñas de esta película</button>
+      <ul class="display-none otras">
+        <p class="otras" name="otras">Reseñas de otros usuarios</p>
+      </ul>
+
     <button class="uk-button uk-button-text resena" type="button" name="button"> Dejá tu reseña de esta película  </button>
     <ul class="display-none rese">
      <form class="formulario" action="/peliculas/resena/<%= idPeli %>" method="post" style="border:1px solid black">
@@ -136,7 +141,7 @@
           
           <label><b>Reseña:</b></label>
           <br> 
-          <input class="resenas"type="message"  placeholder="Deje su reseña" name="texto" required>
+          <input class="resenas" type="message"  placeholder="Deje su reseña" name="texto" required>
 
           <br>
 

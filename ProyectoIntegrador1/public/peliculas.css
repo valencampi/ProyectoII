@@ -221,6 +221,13 @@ button.resena{
   width: 100%;
 }
 
+button.otras{
+  background-color: green;
+  color: black;
+  width: 100%;
+}
+
+
 input{
   width: 50%;
   margin-left: 15px;

@@ -134,6 +134,14 @@ fetch(url)
   ul.classList.toggle("display-none")
 })
 
+// Que se abran la otras resenas
+var otras = document.querySelector ('button.otras')
+otras.addEventListener ("click", function() {
+  // cuando clickeas en el boton se abren las otras resenas
+var ul = document.querySelector("ul.otras")
+ul.classList.toggle("display-none")
+})
+
 // Que se abran la resenas
 var rese = document.querySelector ('button.resena')
 rese.addEventListener ("click", function() {
