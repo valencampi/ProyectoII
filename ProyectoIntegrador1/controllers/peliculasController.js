@@ -1,7 +1,24 @@
+const DB = require('../database/models');
+const OP = DB.Sequelize.Op;
+
 module.exports = {
     index: function (req, res){
-      res.render('peliculas',{
-        idPeli: req.query.id
-      })
-     }
+      DB.Resenas.findAll(
+        {
+            where: {
+                id_Pelicula: req.query.id
+            }
+        }
+    )
+    .then(data =>{
+        res.render('peliculas',{
+          idPeli: req.query.id,
+          resenas: data
+        })
+    })
+   
+    }
  }
+
+
+ 

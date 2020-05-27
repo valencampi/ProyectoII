@@ -1,5 +1,5 @@
-module.exports= function(squelize, DataTypes) {
-    const usuario = squelize.define(
+module.exports= function(sequelize, DataTypes) {
+    const usuario = sequelize.define(
         
         'Usuarios',
         { 
@@ -15,5 +15,15 @@ module.exports= function(squelize, DataTypes) {
             timestamps: false,
         }
     );
+
+    // let usuarios = sequelize.define("usuarios",cols,config);
+    
+    // usuarios.associate = function(models){
+    //     usuarios.hasMany(models.resenas,{
+    //         as: 'resenas',
+    //         foreignKey: 'id_usuario'
+    //     });
+    // }
+
     return usuario;
 }

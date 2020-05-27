@@ -215,6 +215,24 @@ button.recomendaciones{
 }
 
 /* resenas */
+p.puntaje{
+  font-weight: bold;
+}
+
+p.resena{
+  color: red;
+}
+
+p.otras{
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: x-large;
+}
+
+h1.titulo{
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: x-large;
+}
+
 button.resena{
   background-color: yellow;
   color: black;
