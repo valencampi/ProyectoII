@@ -1,29 +1,40 @@
-module.exports= function(sequelize, DataTypes) {
-    const resena = sequelize.define(
+module.exports= function(sequelize, dataTypes) {
+        let alias = "Resenas";
 
-     'Resenas',
-    {
-          id_Pelicula: DataTypes.DECIMAL,
-          id_usuario: DataTypes.DECIMAL,
-          texto: DataTypes.STRING,
-          puntaje: DataTypes.DECIMAL,
-          fecha_de_creacion: DataTypes.DATE,
-    },
+        let cols = {
+            id_Pelicula: {
+                type: dataTypes.DECIMAL
+            },  
+            id_usuario: {
+                type: dataTypes.DECIMAL
+            },
+            texto: {
+                type: dataTypes.STRING
+            },
+            puntaje: {
+                type: dataTypes.DECIMAL
+            },
+            fecha_de_creacion: {
+                type: dataTypes.DATE
+            },
+            fecha_de_actualizacion: {
+                type: dataTypes.DATE
+            },
+         }
 
-    {
-        TableName:'resena', 
-        timestamps: false,
+         let config = {
+            tableName:"resenas", 
+            timestamps: false
+         }
+
+    let Resena = sequelize.define(alias, cols, config);
+
+    Resena.associate = function(models){
+        Resena.belongsTo(models.Usuarios, {
+            as: "usuarios",
+            foreignKey: "id_usuario",
+        });
     }
-);
 
-    // let resenas = sequelize.define(alias,cols,config);
-    
-    // resenas.associate = function(models){
-    //     resenas.belongsTo(models.usuarios, {
-    //         as: 'usuario',
-    //         foreignKey: 'id_usuario'
-    //     });
-    // }
-
-    return resena;
+    return Resena;
 }

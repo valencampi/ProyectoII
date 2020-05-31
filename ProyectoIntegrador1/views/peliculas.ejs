@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit-core-rtl.min.css">
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
-    <title></title>
+    <title>Detalle de pelicula</title>
   </head>
   <body>
     <header>
@@ -120,10 +120,11 @@
     <button class="otras uk-button uk-button-text" type="button" name="button">Reseñas de esta película</button>
         <ul class="display-none otras">
           <p class="otras" name="otras"> Reseñas de otros usuarios</p>  
-        <% if(resenas.length > 0){ %>
+        <% if(resenas.length> 0){ %>
           <% for (let i = 0; i < resenas.length; i++) { %>
             <p class="resena"> 
               Usuario:
+            <!-- <% NO ENTIENDO QUE PONER %> -->
             </p>
             <p class="puntaje">
               Reseña: <%= resenas[i].texto %>
@@ -132,7 +133,8 @@
               Puntaje: <%= resenas[i].puntaje %> 
             </p>
             <p> 
-              Última actualización: 
+              Última actualización: <%= resenas[i].fecha_de_actualizacion %> 
+            <!-- ESTO NO FUNCIONA PORQUE NO SE GUARDA EL DATO EN LA DB -->
             </p>
             <% } %>
          <% } else { %>

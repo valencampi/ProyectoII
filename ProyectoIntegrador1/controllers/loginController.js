@@ -5,9 +5,10 @@ module.exports = {
     index: function (req, res){
       res.render('login')
      },
+}
 
-    //  loggeado: (req, res) => {
-    
+
+ //  loggeado: (req, res) => {   
     //   DB.usuarios.(req.body)
     //   .then(function(index){
     //     return res.redirect('/')
@@ -15,7 +16,4 @@ module.exports = {
     //   .catch(function(error){
     //     return res.send(error);
     // }) 
-
-
     // },
- }

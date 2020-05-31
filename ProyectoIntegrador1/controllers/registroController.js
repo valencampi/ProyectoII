@@ -6,9 +6,7 @@ module.exports = {
         res.render('registro')
        },
     
-    registrado: (req, res) =>{
-      
-      
+    registrado: (req, res) =>{     
         DB.Usuarios.create(req.body)
         .then(function(index){
             return res.redirect('/')
@@ -18,4 +16,5 @@ module.exports = {
         }) 
         
     },
+
 };
