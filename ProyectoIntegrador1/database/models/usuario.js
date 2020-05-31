@@ -2,6 +2,11 @@ module.exports= function(sequelize, dataTypes) {
     let alias = "Usuarios";
 
     let cols = {
+        id:{
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoincrement: true,
+        },
         nombre: {
             type: dataTypes.STRING
         },
@@ -11,27 +16,27 @@ module.exports= function(sequelize, dataTypes) {
         password: {
             type: dataTypes.STRING
         },
-        edad: {
-            type: dataTypes.DATE
-        },
+        // edad: {
+        //     type: dataTypes.DATE
+        // },
         fecha_de_nacimiento: {
             type: dataTypes.DATE
         },
     }
 
     let config = {
-        tableName:"usuario", 
+        tableName:"usuarios", 
         timestamps: false
      }
 
-     let Usuario = sequelize.define(alias, cols, config);
+    let Usuario = sequelize.define(alias, cols, config);
     
-     Usuario.associate = function(models){
-        Usuario.hasMany(models.Resenas, {
-            as: "resenas",
-            foreignKey: "id_usuario"
-        });
-    }
+    //  Usuario.associate = function(models){
+    //     Usuario.hasMany(models.Resenas, {
+    //         as: "resenas",
+    //         primaryKey: "id"
+    //     });
+    // }
 
      return Usuario;
  }

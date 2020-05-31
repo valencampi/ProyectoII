@@ -2,11 +2,16 @@ module.exports= function(sequelize, dataTypes) {
         let alias = "Resenas";
 
         let cols = {
+            id:{
+                type: dataTypes.INTEGER,
+                primaryKey: true,
+                autoIncrement: true,
+            },
             id_Pelicula: {
-                type: dataTypes.DECIMAL
+                type: dataTypes.INTEGER
             },  
             id_usuario: {
-                type: dataTypes.DECIMAL
+                type: dataTypes.INTEGER
             },
             texto: {
                 type: dataTypes.STRING
@@ -29,12 +34,12 @@ module.exports= function(sequelize, dataTypes) {
 
     let Resena = sequelize.define(alias, cols, config);
 
-    Resena.associate = function(models){
-        Resena.belongsTo(models.Usuarios, {
-            as: "usuarios",
-            foreignKey: "id_usuario",
-        });
-    }
+    // Resena.associate = function(models){
+    //     Resena.belongsTo(models.Usuarios, {
+    //         as: "usuarios",
+    //         foreignKey: "",
+    //     });
+    // }
 
     return Resena;
 }

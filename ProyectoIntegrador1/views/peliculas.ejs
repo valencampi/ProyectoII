@@ -124,7 +124,6 @@
           <% for (let i = 0; i < resenas.length; i++) { %>
             <p class="resena"> 
               Usuario:
-            <!-- <% NO ENTIENDO QUE PONER %> -->
             </p>
             <p class="puntaje">
               Reseña: <%= resenas[i].texto %>
@@ -133,8 +132,7 @@
               Puntaje: <%= resenas[i].puntaje %> 
             </p>
             <p> 
-              Última actualización: <%= resenas[i].fecha_de_actualizacion %> 
-            <!-- ESTO NO FUNCIONA PORQUE NO SE GUARDA EL DATO EN LA DB -->
+              Última actualización:
             </p>
             <% } %>
          <% } else { %>

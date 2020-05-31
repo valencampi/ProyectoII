@@ -19,11 +19,11 @@ module.exports = {
    
     },
 
-    usuario: function (req, res){
+    /* usuario: function (req, res){
       DB.usuarios.findByPK(req.params.id, {
         include: [{association: "usuario"}, {association: "resena"}]
       })
-    }
+    } */
    
  }
 
