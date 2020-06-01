@@ -122,7 +122,7 @@
           <p class="otras" name="otras"> Reseñas de otros usuarios</p>  
         <% if(resenas.length> 0){ %>
           <% for (let i = 0; i < resenas.length; i++) { %>
-            <p class="resena"> 
+            <p> 
               Usuario: <%= resenas[i].usuarios.nombre %>
             </p>
             <p class="puntaje">
@@ -134,11 +134,13 @@
             <p> 
               Última actualización: <%= resenas[i].fecha_de_actualizacion %>
             </p>
+            <hr>
             <% } %>
          <% } else { %>
            <h2> Todavía no hay reseñas de esta película </h2>
          <% } %>
         </ul>
+    
 
     <button class="uk-button uk-button-text resena" type="button" name="button"> Dejá tu reseña de esta película  </button>
     <ul class="display-none rese">
