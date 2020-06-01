@@ -14,6 +14,7 @@ const resultadoRouter = require ('./routes/resultado');
 const registroRouter = require ('./routes/registro');
 const resenaRouter = require ('./routes/resena');
 const loginRouter = require ('./routes/login');
+const misResenasRouter = require ('./routes/misResenas');
 
 var app = express();
 
@@ -37,6 +38,7 @@ app.use('/resultado', resultadoRouter);
 app.use('/registro', registroRouter);
 app.use('/peliculas', resenaRouter);
 app.use('/login', loginRouter);
+app.use('/misResenas', misResenasRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
