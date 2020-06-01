@@ -123,7 +123,7 @@
         <% if(resenas.length> 0){ %>
           <% for (let i = 0; i < resenas.length; i++) { %>
             <p class="resena"> 
-              Usuario:
+              Usuario: <%= resenas[i].usuarios.nombre %>
             </p>
             <p class="puntaje">
               Reseña: <%= resenas[i].texto %>
@@ -132,7 +132,7 @@
               Puntaje: <%= resenas[i].puntaje %> 
             </p>
             <p> 
-              Última actualización:
+              Última actualización: <%= resenas[i].fecha_de_actualizacion %>
             </p>
             <% } %>
          <% } else { %>

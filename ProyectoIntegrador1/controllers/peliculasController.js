@@ -7,11 +7,14 @@ module.exports = {
         {
             where: {
                 id_Pelicula: req.query.id
-            }
+            },
+          include: {
+            association: "usuarios"
+          },
         }
     )
     .then(data =>{
-        res.render('peliculas',{
+         res.render('peliculas',{
           idPeli: req.query.id,
           resenas: data
         })
@@ -19,12 +22,6 @@ module.exports = {
    
     },
 
-    /* usuario: function (req, res){
-      DB.usuarios.findByPK(req.params.id, {
-        include: [{association: "usuario"}, {association: "resena"}]
-      })
-    } */
-   
  }
 
  

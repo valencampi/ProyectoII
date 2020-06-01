@@ -34,12 +34,12 @@ module.exports= function(sequelize, dataTypes) {
 
     let Resena = sequelize.define(alias, cols, config);
 
-    // Resena.associate = function(models){
-    //     Resena.belongsTo(models.Usuarios, {
-    //         as: "usuarios",
-    //         foreignKey: "",
-    //     });
-    // }
+    Resena.associate = function(models){
+        Resena.belongsTo(models.Usuarios, {
+            as: "usuarios",
+            foreignKey: "id_usuario",
+        });
+    }
 
     return Resena;
 }
