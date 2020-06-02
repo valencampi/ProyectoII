@@ -7,4 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 
+router.post('/reviews', usersController.confirmusers);
+router.get('/reviews/:id', usersController.getReviews); //listado de mis resñas 
+
 module.exports = router;
