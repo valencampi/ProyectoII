@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var usersController = require('../controllers/misResenasController');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -7,7 +8,10 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.post('/reviews', usersController.confirmusers);
-router.get('/reviews/:id', usersController.getReviews); //listado de mis resñas 
+router.post('/reviews', usersController.confirmuser);
+//router.get('/reviews/:id', usersController.getReviews); //listado de mis resñas 
+router.get('/reviews/editar/:id', usersController.mostrarEditar);
+
+
 
 module.exports = router;

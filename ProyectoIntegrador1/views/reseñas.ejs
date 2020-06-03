@@ -18,7 +18,7 @@
  <% for ( let i = 0; i < resultado.legth; i++) {%>
  <div> resultado[i].puntaje %> </div>
  <div> <h4> <%= resultado[i].resena %></h4> </div>
-<a href="/users/review/edit/<%= resultado[i].id %> Editar </a>
+<a href="/users/review/edit/ <%= resultado[i].id %>"></a>" Editar </a>
 <a href="/detalle?idPelicula=<%= resultado[i].pelicula_id %> "> Ir a la pelicula </a>
 <% } %>
 </body>
