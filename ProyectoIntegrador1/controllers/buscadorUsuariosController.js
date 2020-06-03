@@ -12,17 +12,16 @@ module.exports = {
     DB.Usuarios.findAll({
         where: {
             [OP.or]:{
-                 email: {[OP.like]: '%' + req.body.searchUsuarios + '%'},
+                 email: {[OP.like]: '%'+ req.body.searchUsuarios + '%'},
                  nombre: {[OP.like]: '%'+ req.body.searchUsuarios + '%'}
             }}
        })
     .then (function (resultado) {
         res.send(resultado)
-            res.render('resultadoUsuarios', {
-                usuarios: resultado
-            })  
-        })
-    }     
+        //     res.render('resultadoUsuarios', {
+        //         usuarios: resultado
+        //     })  
+        // })
+    } )  }  
 
 };
-
