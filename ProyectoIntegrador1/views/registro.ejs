@@ -105,15 +105,13 @@
 		<br>
 
 		<label><b>¿Cuál es tu género de pelicula favorito?</b></label>
-		<select class="genero" name="genero" id="">
-			<option value="nada" selected disabled>Elegir</option>
-				<option>
-					<ul class="generos">
-				</ul>
-			</option>
-			</select>
-	
-	
+		<select class="genero" name="id_genero" id="">
+			<option selected disabled>Elegir</option>
+			<% for( let i = 0; i < arrayGeneros.length; i++ ) { %>
+				<option value="<%= arrayGeneros[i].id %> "><%= arrayGeneros[i].name %> </option>
+			<% } %>
+		</select>
+		
 		<button class="usuario" type="submit">Crear Usuario</button>
 
 	
