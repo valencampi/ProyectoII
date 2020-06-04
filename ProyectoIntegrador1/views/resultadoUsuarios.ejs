@@ -9,7 +9,7 @@
     <h1>Estos son los resultados de tu busqueda</h1>
     <% if(usuarios.length !=0){%>
         <% for(let i = 0; i < usuarios.length; i++) {%>
-        <h3> <%= usuarios[i].nombre %> | Email: <%= usuarios[i].email %>  </h3>
+        <h3> <a href="/detalle/<%=usuarios[i].id%>"><%= usuarios[i].nombre %></a> | Email: <%= usuarios[i].email %>  </h3>
         <%}%>
         <%} else {%>
             <p>No ningún usuario para tu busqueda</p>
