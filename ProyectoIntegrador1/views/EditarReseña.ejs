@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div>
+         <Form id="formlogin" method="POST" action="/users/reviews/edit <% resultado.id %"> ">
+            <h1>Editar reseña</h1> 
+            <div>
+            <input type="text" id="email" name="email" placeholder="email...">
+             </div>
+             <div>
+                 <input type="password" id="pass" name="password" placeholder="password...">
+
+             </div>
+             <div>
+                 <label for="resena"> Reseña</label>
+                 <textarea name="resena" id="resena" cols="30" rows="10"> <%= resultado.resena %> </textarea>
+             </div>
+
+             //falta el puntaje 
+
+            <button type="submit" name="button"> enviar </button>
+         </Form>
+
+     </div>
+</body>
+</html>
+
