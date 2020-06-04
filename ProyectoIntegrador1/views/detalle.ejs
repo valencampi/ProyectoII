@@ -11,8 +11,17 @@
     <ul>
         <li>Email: <%= usuario.email %></li>
         <li>Fecha de nacimiento: <%= usuario.fecha_de_nacimiento %></li>
+        <% if(usuario.resenas.length !=0){%>
         <h3>Resenas:</h3>
-        <% resena %> 
+        <% for (let i = 0; i < usuario.resenas.length; i++) { %> 
+            <h2><%=  usuario.resenas[i].texto %> </h2>
+            <a href="/movies/detalle/<%=  usuario.resenas[i].id_Pelicula %>">ver peliuclas</a>
+        <% }%> 
+        <% }else{ %> 
+            <h3>Este usuario no tiene reseñas</h3>
+            <% }%>
+        
+      
        
     </ul>
 </body>

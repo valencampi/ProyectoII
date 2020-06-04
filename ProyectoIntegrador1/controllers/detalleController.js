@@ -8,19 +8,17 @@ module.exports = {
         res.send('  ')
     },
    detalle:  function(req, res) {
-       DB.Usuarios.findByPk(req.params.id)
+       //return res.send("el id de usuario es " + req.params.id)
+       DB.Usuarios.findByPk(req.params.id, {
+           include: [ "resenas"]
+       })
        .then (function (usuario){
-           DB.Resenas.findAll({
-            where: {
-                [OP.or]:{
-                     id_usuario: {[OP.like]: '%'+ req.params.id+ '%'},
-                }}})
-        .then(function(resultado){
-            res.render('detalle', {
-                usuario: usuario , 
-                resena: resultado ,
-            })
+          // return res.send(usuario)
+        res.render('detalle', {
+            usuario: usuario , 
+            // resena: resultado ,
         })
+    
        })
       
     }
