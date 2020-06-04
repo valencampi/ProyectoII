@@ -3,7 +3,9 @@
   
   }
   
-
+ul.nav{
+  padding-left: 5px;
+}
 
   /* .linkss{
       display: flex;

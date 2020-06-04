@@ -245,6 +245,10 @@ button.otras{
   width: 100%;
 }
 
+input.resultado{
+  width: 70%;
+}
+
 
 input{
   width: 50%;
