@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar reseñas</title>
+</head>
+<body>
+    <header>
+        <nav class="header encabezado">
+            <a href="/"> <img class="logo" src="Mono.jpeg"> </a>
+            <ul class="nav">
+              <a href="/">
+                <li class="li1">Inicio</li>
+              </a>
+
+              <a href="/generos">
+                <li class="li1">Géneros</li>
+              </a>
+              <!-- <a class="preferidas" href="/PeliculasPreferidas">
+                <li class="li1">Mis películas preferidas</li>
+              </a> -->
+              <li class="buscador">
+                <form class="buscador1" action="/resultado" method="get">
+                  <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de películas">
+                  <button type="submit">Buscar</button>
+                </form>
+              </li>
+              <li class="nombre"> </li>
+            </ul>
+          </nav class="header">
+  
+        <nav class="mqMobile">
+            <nav class="uk-navbar-container" uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a href="/" class="uk-navbar-item uk-logo">
+                            <img src="Mono.jpeg" class="logoMq" alt="logo" srcset="">
+                        </a>
+                        <li class="nombre"> </li>
+                        <a class="uk-navbar-toggle dis-none h-40" id="navbar_toggle">
+                            <i uk-icon="icon: menu; ratio: 2">
+                              <svg width="40" height="40" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="menu"><rect x="2" y="4" width="16" height="1"></rect><rect x="2" y="9" width="16" height="1"></rect><rect x="2" y="14" width="16" height="1"></rect></svg>
+                            </i>
+  
+  
+                        </a>
+                        <div class="navbar-collapse" id="navbar_collapse" style="display: block;">
+                            <ul class="uk-navbar-nav">
+                              <ul class="nav">
+                                <a href="/">
+                                  <li class="li1">Inicio</li>
+                                </a>
+                                <!-- <li class="logInMq"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Log in</button>
+                                </li> -->
+                                <a href="/generos">
+                                  <li class="li1">Géneros</li>
+                                </a>
+                                <a href="/registro">
+                                <li class='li1'>Crear Usuario</li>
+                              </a>
+                                 <a class="preferidasMq" href="/PeliculasPreferidas">
+                                  <li class="li1" >Mis películas preferidas</li>
+                                </a>
+                                <li class="buscador">
+                                  <form class="buscador1" action="/resultado" method="get">
+                                    <input type="search" name="buscador" class="resultado" placeholder="Buscador">
+                                    <button type="submit" class="botonBuscar">Buscar</button>
+                                  </form>                                
+                                </li>
+                              </ul>
+                            </ul>
+                        </div>
+                    </div>
+              </nav>
+            </nav>
+  
+      </header>
+
+    <section class="cuerpo">
+         <form id="formlogin" method="POST" action="/users/reviews/edit <% resultado.id %"> ">
+            <h1>Editar reseña</h1> 
+            <div>
+            <input type="text" id="email" name="email" placeholder="email...">
+             </div>
+             <div>
+                 <input type="password" id="pass" name="password" placeholder="password...">
+
+             </div>
+             <div>
+                 <label for="resena"> Reseña</label>
+                 <textarea name="resena" id="resena" cols="30" rows="10"> <%= resultado.resena %> </textarea>
+             </div>
+
+            //  falta el puntaje 
+
+            <button type="submit" name="button"> enviar </button>
+         </form>
+    </section>
+   
+
+     <footer>
+        <nav class="final">
+          <img class="movie" src="logomovies.png" alt="">
+          <ul class="ul2">
+            <li class="li2">Maitena Galindez</li>
+            <li class="li2">Valentina Campitelli</li>
+            <li class="li2">Marcos Estrada</li>
+          </ul>
+        </nav>
+      </footer>
+</body>
+</html>
+

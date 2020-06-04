@@ -8,29 +8,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit-core-rtl.min.css">
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="inicio.css">
-    <link rel="stylesheet" href="iniciocar.css">
+    <link rel="stylesheet" href="login.css">
     <title>Mis resenas</title>
 </head>
 <body>
     <header>
 		<nav class="header encabezado">
-			
-			<ul class="nav">
-				<div class='linkss'>
-			  <a href="/"> <img class="logo" src="Mono.jpeg"> </a>
-			  <a href="/">
+            <a href="/"> <img class="logo" src="Mono.jpeg"> </a>
+            <ul class="nav">
+              <a href="/">
 				<li class="li1">Inicio</li>
 			  </a>
 			  <a href="/generos">
 				<li class="li1">Géneros</li>
 			  </a>
-			  <a class="preferidas" href="/PeliculasPreferidas">
+			  <!-- <a class="preferidas" href="/PeliculasPreferidas">
 				<li class="li1">Mis películas preferidas</li>
-			  </a>
+			  </a> -->
 				</div>
 			  <li class="buscador">
 				<form class="buscador1" action="/resultado" method="get">
-				  <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador">
+				  <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de peliculas">
 				  <button type="submit">Buscar</button>
 				</form>
 			  </li>
@@ -63,9 +61,9 @@
 								<a href="/generos">
 								  <li class="li1">Géneros</li>
 								</a>
-								<a class="preferidasMq" href="/PeliculasPreferidas">
+								<!-- <a class="preferidasMq" href="/PeliculasPreferidas">
 								  <li class="li1" >Mis películas preferidas</li>
-								</a>
+								</a> -->
 								<li class="buscador">
 								  <form class="buscador1" action="/resultado" method="get">
 									<input type="search" name="buscador" class="resultado" placeholder="Buscador">
@@ -82,18 +80,27 @@
 	  </header>
 	
 	  
-	<section>
-		<div>
-			<from id="formlogin" method="POST" action="/users/reviews">
-			<h1> Login Reseñas </h1>
-			 <div>
-			  <input type="text" id="email" name="email"	placeholder="email...">
-			 </div>
-			 <div>
-			  <input type="pasword" id="pass" name="pasword" placeholder="pasword">
-			 </div>
-			<button type="submit" name="button"> ENTER </button>
+	<section class="cuerpo">
+		<from class="formulario" id="formlogin" method="post" action="/users/reviews">
+			<div class="container"> 
+			<h1> Ingresar </h1>
+			<label class="ingresar">Email:</label>
+			<br>
+			  <input class="mail" type="email" id="email" name="email" placeholder="Ingresar email" required>
+				<br>
+				<br>
+			<label class="ingresar">Contraseña:</label>
+			  	<br>
+			  <input type="password" id="pass" name="password" placeholder="Ingresar contraseña" required> 
+				<br>
+				<br>
+			  <button class="ingreso" type="submit" name="button"> Enviar </button>
+			</div>
+		</form>
 	</section>
+
+	<br>
+	<br>
 
     <footer>
         <nav class="final">

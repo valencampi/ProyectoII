@@ -19,16 +19,18 @@
               <a href="/">
                 <li class="li1">Inicio</li>
               </a>
-
               <a href="/generos">
                 <li class="li1">Géneros</li>
               </a>
-              <a class="preferidas" href="/PeliculasPreferidas">
-                <li class="li1">Mis películas preferidas</li>
+              <a href="/MisResenas">
+                <li class="li1">Mis reseñas</li>
               </a>
+              <!-- <a class="preferidas" href="/PeliculasPreferidas">
+                <li class="li1">Mis películas preferidas</li>
+              </a> -->
               <li class="buscador">
                 <form class="buscador1" action="/resultado" method="get">
-                  <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador">
+                  <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de peliculas">
                   <button type="submit">Buscar</button>
                 </form>
               </li>
@@ -61,12 +63,15 @@
                                 <a href="/generos">
                                   <li class="li1">Géneros</li>
                                 </a>
+                                <a href="/MisResenas">
+                                  <li class="li1">Mis reseñas</li>
+                                </a>
                                 <a href="/registro">
                                 <li class='li1'>Crear Usuario</li>
                               </a>
-                                 <a class="preferidasMq" href="/PeliculasPreferidas">
+                                 <!-- <a class="preferidasMq" href="/PeliculasPreferidas">
                                   <li class="li1" >Mis películas preferidas</li>
-                                </a>
+                                </a> -->
                                 <li class="buscador">
                                   <form class="buscador1" action="/resultado" method="get">
                                     <input type="search" name="buscador" class="resultado" placeholder="Buscador">
@@ -95,7 +100,7 @@
 
         <label class="ingresar">Contraseña:</label>
         <br>
-        <input type="password" name="pasword" placeholder="Ingresar contraseña" required>
+        <input type="password" name="password" placeholder="Ingresar contraseña" required>
         
         <br>
         <br>
