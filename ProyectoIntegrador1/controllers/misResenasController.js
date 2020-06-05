@@ -38,12 +38,12 @@ module.exports = {
       moduloLogin.validar(req.body.email, req.body.password)
       .then (resultado =>{
         if(resultado == undefined){
-          res.redirect('/users/reviews //review es el formulario de logueo');
+          res.redirect('/misResenas');
           } else{ 
-            res.redirect('/users/reviews' + resultado.id)
+            res.redirect('/listado/' + resultado.id)
           }
         })
-    }
+    },
      
     
     /*validar: function (email, pass){

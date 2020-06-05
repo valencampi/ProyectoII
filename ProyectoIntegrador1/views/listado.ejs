@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit-core-rtl.min.css">
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="inicio.css">
-    <link rel="stylesheet" href="login.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="listado.css">
+    <link rel="stylesheet" href="iniciocar.css">
+    <title>Listado de resenas</title>
 </head>
 <body>
     <header>
@@ -19,6 +20,14 @@
               <a href="/">
                 <li class="li1">Inicio</li>
               </a>
+              <!-- <a href="/registro">
+               <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Registrarse</button>
+              </li> 
+               </a> -->
+               <!-- <a href="/login">
+                <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Ingresar</button>
+               </li> 
+                </a> -->
               <a href="/generos">
                 <li class="li1">Géneros</li>
               </a>
@@ -26,13 +35,10 @@
                 <li class="li1">Mis reseñas</li>
               </a> -->
               <a href="/buscadorUsuarios">
-                <li class="li1">Buscador de Usuarios</li></a>
-              <!-- <a class="preferidas" href="/PeliculasPreferidas">
-                <li class="li1">Mis películas preferidas</li>
-              </a> -->
+              <li class="li1">Buscador de Usuarios</li></a>
               <li class="buscador">
                 <form class="buscador1" action="/resultado" method="get">
-                  <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de peliculas">
+                  <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de películas">
                   <button type="submit">Buscar</button>
                 </form>
               </li>
@@ -70,7 +76,7 @@
                                 </a>
                                 <a href="/registro">
                                 <li class='li1'>Crear Usuario</li>
-                              </a>
+                               </a>
                                  <!-- <a class="preferidasMq" href="/PeliculasPreferidas">
                                   <li class="li1" >Mis películas preferidas</li>
                                 </a> -->
@@ -89,35 +95,11 @@
   
       </header>
 
-  <section class="cuerpo">
-      <form class="formulario" action="/login/loggeado" method="post" style="border:1px solid #ccc">
-    <div class="container"> 
-        <h1> Ingresar </h1>
-        <label class="ingresar">Email</label>
-        <br>
-        <input class="mail" type="email" placeholder="Ingresar email" name="email" required>
-
-        <br>
-        <br>
-
-        <label class="ingresar">Contraseña:</label>
-        <br>
-        <input type="password" name="password" placeholder="Ingresar contraseña" required>
-        
-        <br>
-        <br>
-
-     <button class="ingreso" type="submit">Ingresar</button>
-
-    </div>
-      </form>
-   
+  <section class="listado">
+    <p> Las resenas del usuario </p>
   </section>
 
-  <br>
-  <br>
-
-      <footer>
+    <footer>
         <nav class="final">
           <img class="movie" src="logomovies.png" alt="">
           <ul class="ul2">
@@ -127,7 +109,5 @@
           </ul>
         </nav>
       </footer>
-
 </body>
-  
 </html>
