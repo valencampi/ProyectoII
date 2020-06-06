@@ -4,6 +4,25 @@ const moduloLogin = require ('../ModuloLogin.js')
 
 module.exports = {
     index: function (req, res){
-      res.render('listado')
+      DB.Usuarios.findByPk(req.params.id, {
+        include: [
+          {association: 'resenas'}
+      ]
+      })
+        .then(usuario => {
+          return res.send(usuario)
+          res.render('listado', {usuario})
+        })
+
      },
+     /* mostrarEditar: function (req, res){
+       DB.Resena.findOne({
+         where:[
+           {id: req.params.id}
+         ]
+       })
+       .then(resultado => {
+         res.render('editarResena',{resultado: resultado})
+       })
+     } */
 }

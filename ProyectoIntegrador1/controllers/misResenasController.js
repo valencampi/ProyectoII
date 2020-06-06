@@ -4,21 +4,18 @@ const moduloLogin = require ('../ModuloLogin.js')
 
 module.exports = {
     index: function (req, res){
-      res.render('misResenas')
+       res.render('misResenas')
      },
      
-     mostrarEditar: function(req, res) {
+    mostrarEditar: function(req, res) {
       db.Resena.findOne({
         where:[
           {id: req.params.id}
     
         ]
       })
-      .then(resultado =>{
-        res.render('editarResena', { resultado });
-    
-      })
     },
+          
 
     /*getReviews: function (req,res) {
       db.Resena.findAll ({
@@ -29,8 +26,8 @@ module.exports = {
       })
      .then(resultado => {
        res.render('reviews', {resultado:resultado})
-     })
-     },*/
+        })
+    },*/
 
        
 
@@ -43,7 +40,7 @@ module.exports = {
             res.redirect('/listado/' + resultado.id)
           }
         })
-    },
+    }
      
     
     /*validar: function (email, pass){
