@@ -53,15 +53,17 @@ module.exports = {
                      fecha_de_actualizacion: DB.sequelize.literal("CURRENT_DATE")
                  }, {
                     
-                 })
-             }
              where: {
                  id: req.params.id
              }
-         })
-         .catch(function(error){
-            return res.send(error);
-        })
+         });
+            res.redirect('/');
+        }else{
+            res.send("error")
+        }
+      })
     },
+
+
 
 }
