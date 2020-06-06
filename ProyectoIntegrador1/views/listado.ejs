@@ -40,9 +40,17 @@
     </ul>
  <% } else { %>
     <h1> Todavia no hiciste reseñas</h1>
- <% } %> %>
-
+    
+ <% } %> 
+    <div>
+  <a href="/editarResena/ <%= usuario.resenas.id %>"> Editar </a>
+  <a href="/pelicula?idPelicula <%= usuario.resenas.id_Pelicula %>"> Ir a la pelicula </a>
+  <a href="/Borrar <%= usuario.resenas.id %>"> Borrar </a>
+    </div> 
+ 
+  
 </section>
+
 
   <!-- <footer>
     <nav class="final">
