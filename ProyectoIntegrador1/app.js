@@ -18,7 +18,8 @@ const misResenasRouter = require ('./routes/misResenas');
 const buscadorUsuariosRouter = require ('./routes/buscadorUsuarios');
 const detalleRouter = require ('./routes/detalle');
 const listadoRouter = require ('./routes/listado');
-/* const editarResenas = requiere ('/routes/listado'); */
+const editarResenaRouter = require('./routes/editarResena')
+const borrarResenaRouter = require('./routes/borrarResena');
 
 var app = express();
 
@@ -46,7 +47,8 @@ app.use('/misResenas', misResenasRouter);
 app.use('/buscadorUsuarios', buscadorUsuariosRouter);
 app.use('/detalle', detalleRouter);
 app.use('/listado', listadoRouter);
-/* app.use('/editarResenas', editarResenaRouter); */
+app.use('/editarResena', editarResenaRouter);
+app.use('/borrarResena', borrarResenaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

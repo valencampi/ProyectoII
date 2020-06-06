@@ -1,7 +1,72 @@
 *{box-sizing: border-box;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
+section{
+    height: fit-content;
+}
 
-.listado{
-    height: 470px;
+p.subtitulos{
+  color: white !important;
+  text-decoration: underline;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+p.editar{
+    color: white !important;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+  }
+
+p.estas{
+    color: white !important;
+}
+
+p{
+    color: white;
+}
+
+a.pelicula{
+    color: yellow;
+}
+
+a.editar{
+    color: green;
+    font-style: italic;
+}
+
+a.borrar{
+    color: red;
+}
+
+button.usuario_1 {
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  button.usuario_2 {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+
+  .cuerpo_1{
+    
+    display: flex;
+    justify-content: center;
+    
 }
