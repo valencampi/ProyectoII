@@ -19,9 +19,9 @@ module.exports= function(sequelize, dataTypes) {
         fecha_de_nacimiento: {
             type: dataTypes.DATE
         },
-    //    id_genero: {
-    //         type: dataTypes.INTEGER
-    //     },
+       id_genero: {
+            type: dataTypes.INTEGER
+        },
     }
 
     let config = {

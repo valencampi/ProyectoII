@@ -10,11 +10,12 @@ module.exports = {
       ]
       })
         .then(usuario => {
-          return res.send(usuario)
+         // return res.send(usuario)
           res.render('listado', {usuario})
         })
+      },
 
-     },
+      
      /* mostrarEditar: function (req, res){
        DB.Resena.findOne({
          where:[

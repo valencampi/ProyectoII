@@ -1,0 +1,23 @@
+<% if (resultado.length == 0) { %>
+    <h1> No hiciste ninguna resena </h1>
+  <% } else { %> 
+    <h1> <% resultado[0].usuario.nombre %>'s resenas </h1>
+    <% for(let i = 0; i < resultado.length, i++) { %> 
+   <div>
+      <div>
+      Puntaje: <%= resultado[i].puntaje %> 
+    </div>
+    <div>
+      <%= resultado[i].texto %> 
+    </div>
+    <div>
+      <a herf="/editarResena<%= resultado[i].id %>">Editar resena</a>
+    </div>
+    <div>
+      <a herf="/pelicula?idPelicula<%= resultado[i].id %>">Ver detalle de esta pelicula</a>
+    </div>
+    <div>
+      <a herf="/ resultado[i].id ">Eliminar resena</a>
+    </div>
+  </div> 
+ <% } %>
