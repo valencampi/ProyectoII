@@ -2,10 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/uikit.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit-core-rtl.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="resultadoUsuario.css">
+	<title>ResultadoUsuario</title>
 </head>
 <body>
+    <header>
+        <nav class="header encabezado">
+			<ul class="nav">
+			
+			  <a href="/"> <img class="logo" src="Mono.jpeg"> </a>
+			  <a href="/">
+				<li class="li1">Inicio</li>
+			  </a>
+			  <a href="/generos">
+				<li class="li1">Géneros</li>
+			  </a>
+			  
+			  <li class="buscador">
+				<form class="buscador1" action="/resultado" method="get">
+				  <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de películas">
+				  <button type="submit">Buscar</button>
+				</form>
+			  </li>
+			  
+			</ul>
+		  </nav class="header">
+  
+
+    </header>
+    <main>
     <h1>Estos son los resultados de tu busqueda</h1>
     <% if(usuarios.length !=0){%>
         <% for(let i = 0; i < usuarios.length; i++) {%>
@@ -14,5 +44,6 @@
         <%} else {%>
             <p>No ningún usuario para tu busqueda</p>
         <% } %>
-</body>
+    </main>
+    </body>
 </html>
