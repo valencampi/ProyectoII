@@ -49,6 +49,7 @@ height: 100%;
         <div class="datos">
             <li class="dato">Email: <%= usuario.email %></li>
             <li class="dato">Fecha de nacimiento: <%= usuario.fecha_de_nacimiento %></li>
+            <li class="dato"> Género Favorito:<a href="/pelicularPorGenero?idgenero=  <%= usuario.id_genero %>"><%= usuario.id_genero %></a> </li>
         </div>
         <% if(usuario.resenas.length !=0){%>
         <h3>Resenas:</h3>
