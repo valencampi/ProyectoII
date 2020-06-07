@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="detalle.css">
     <title>Document</title>
 </head>
 <body>
@@ -14,13 +15,14 @@
         <% if(usuario.resenas.length !=0){%>
         <h3>Resenas:</h3>
         <% for (let i = 0; i < usuario.resenas.length; i++) { %> 
-            <h2><%=  usuario.resenas[i].texto %> </h2>
-            <a href="/movies/detalle/<%=  usuario.resenas[i].id_Pelicula %>">ver peliuclas</a>
+            <h3> Pelicula: <%= usuario.resenas[i].id_Pelicula %> |<a href="/peliculas?id=<%=  usuario.resenas[i].id_Pelicula %>">  Ver peliucla</a></h3>
+            <p><%=  usuario.resenas[i].texto %> </p>
+            <h3><%= usuario.resenas[i].puntaje %> </h3>
+            <br>
         <% }%> 
         <% }else{ %> 
             <h3>Este usuario no tiene reseñas</h3>
             <% }%>
-        
       
        
     </ul>
