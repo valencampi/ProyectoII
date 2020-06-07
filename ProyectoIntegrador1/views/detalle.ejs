@@ -3,15 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="detalle.css">
+    <link rel="stylesheet" href="../detalle.css">
     <title>Document</title>
 </head>
-<body>
+<body style="
+margin-top: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+height: 100%;
+">
+<div class="contenedor">
+<header>
+    <nav class="header encabezado">
+        <ul class="nav">
+         <div class='izq'>
+            <a href="/"> <img class="logo" src="../Mono.jpeg"> </a>
+            <a href="/">
+                <li class="li1">Inicio</li>
+            </a>
+            <a href="/generos">
+                <li class="li1">Géneros</li>
+            </a>
+            <a href="/MisResenas">
+                <li class="li1">Mis reseñas</li>
+              </a>
+        </div>
+        <div class="derecha">
+            <li class="buscador">
+                <form class="buscador1" action="/resultado" method="get">
+                  <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de películas">
+                  <button type="submit">Buscar</button>
+                </form>
+              </li>
+        </div>
+         
+          
+        </ul>
+        </nav>
+</header>
+    <main>
     <h1>Estas viendo el perfil del usuario: <%= usuario.nombre %></h1>
-    <br>
+    
     <ul>
-        <li>Email: <%= usuario.email %></li>
-        <li>Fecha de nacimiento: <%= usuario.fecha_de_nacimiento %></li>
+        <div class="datos">
+            <li class="dato">Email: <%= usuario.email %></li>
+            <li class="dato">Fecha de nacimiento: <%= usuario.fecha_de_nacimiento %></li>
+        </div>
         <% if(usuario.resenas.length !=0){%>
         <h3>Resenas:</h3>
         <% for (let i = 0; i < usuario.resenas.length; i++) { %> 
@@ -23,10 +61,23 @@
         <% }else{ %> 
             <h3>Este usuario no tiene reseñas</h3>
             <% }%>
-      
-       
     </ul>
+    </main>
+    <footer>
+        <nav class="final">
+            <img class="movie" src="../logomovies.png" alt="">
+            <ul class="ul2">
+              <li class="li2">Maitena Galindez</li>
+              <li class="li2">Valentina Campitelli</li>
+              <li class="li2">Marcos Estrada</li>
+            </ul>
+          </nav>
+    </footer>
+
+    </div>
 </body>
+
+
 </html>
 
 

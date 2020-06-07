@@ -1,4 +1,131 @@
-h1{
-    color: indianred;
-    font-family: 'Times New Roman', Times, serif;
+* {
+    box-sizing: border-box;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+body{
+    margin: none !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.contenedor{
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header{
+    background-color: rgb(38, 38, 38);
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 15%
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.izq{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+}
+
+
+.logo {
+    margin: 10px;
+    height: 70px;
+    width: 70px;
+    float: left;
+    z-index: 3;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 35px;
+  }
+
+  .li1 {
+    list-style-type: none;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    float: left;
+    font-size: 20px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 300;
+  }
+
+  .derecha{
+      display: flex;
+      align-items: center;
+  }
+
+  li.buscador{
+    
+    align-items: center;
+    list-style-type: none;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    
+  }
+
+  /* main */
+
+  main{
+      background-color:rgb(240, 240, 240);
+      width: 95%;
+      margin: 2%;
+      border-color: darkgray;  
+      border: 3px solid gray;
+      border-radius: 15px;
+     
+    }
+  .dato{
+    text-decoration: none;
+    list-style: none;
+    
+
+  }
+  
+
+
+/* 
+  footer */
+
+
+  footer{
+      background-color: whitesmoke;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+
+  .final{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     
+  }
+
+  .movie{
+      height: 100px;
+  }
+
+  .ul2{
+      display: flex;
+      justify-content: space-between;
+      width: 600px;
+      padding: 20px;
+     
+  }
+
+  .li2{
+      list-style: none;
+      font-size: 20px;
+      font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  }
