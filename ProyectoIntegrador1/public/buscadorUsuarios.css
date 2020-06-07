@@ -3,7 +3,7 @@
     
     }
 /* header */
-header{
+/* header{
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -81,7 +81,7 @@ header{
     padding: 15px;
     color: white;
   
-  }
+  } */
 /* body */
   body{
      margin: 0;
@@ -137,7 +137,7 @@ main{
     display: flex;
     align-items:center ;
     justify-content: center;
-    background-color: rgb(87, 87, 87);
+    /* background-color: rgb(87, 87, 87); */
 }
 
 .buscadorUsuarios{
@@ -176,7 +176,7 @@ main{
     background-color: #F3EDED;
     margin-top: 1px;
   }
-  
+  /*
   .final{
     background-color: white;
     display: flex;
@@ -201,4 +201,4 @@ main{
     top: 9px;
     left: 5px;
   }
-  
+   */

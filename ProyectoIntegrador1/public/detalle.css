@@ -2,12 +2,14 @@
     box-sizing: border-box;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
 body{
     margin: none !important;
     position: absolute;
     width: 100%;
     height: 100%;
 }
+/* 
 .contenedor{
     height: 100%;
     background-color: black;
@@ -72,11 +74,11 @@ header{
     padding: 15px;
     color: white;
     
-  }
+  } */
 
   /* main */
 
-  main{
+  section{
       background-color:rgb(240, 240, 240);
       width: 95%;
       margin: 2%;
@@ -85,26 +87,49 @@ header{
       border-radius: 15px;
      
     }
+
   .dato{
     text-decoration: none;
     list-style: none;
-    
-
-  }
+    font-size: medium;
+  } 
   
+  hr.color{
+    border-color: black;
+    border-radius: 3px;
+   }
+
+   h3{
+     text-decoration: underline;
+     font-size: large;
+   }
+
+   h1.perfil{
+     font-size: x-large;
+   }
+
+   
+select.genero{
+  width: 95.5%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
 
 
 /* 
   footer */
-
+ 
 
   footer{
-      background-color: whitesmoke;
+    background-color: whitesmoke;
     position: absolute;
     bottom: 0px;
     width: 100%;
   }
-
+/*
   .final{
       display: flex;
       justify-content: space-between;
@@ -128,4 +153,4 @@ header{
       list-style: none;
       font-size: 20px;
       font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  }
+  } */
