@@ -35,7 +35,7 @@ module.exports = {
       moduloLogin.validar(req.body.email, req.body.password)
       .then (resultado =>{
         if(resultado == undefined){
-          res.redirect('/misResenas');
+          res.send('Usuario inexistente, vuelva para atras');
           } else{ 
             res.redirect('/listado/' + resultado.id)
           }

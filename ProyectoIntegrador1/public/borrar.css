@@ -1,0 +1,13 @@
+*{box-sizing: border-box;
+    margin-bottom: 20px; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+
+footer{
+   
+    position: absolute !important;
+    height: 50px;
+    
+    left: 0;
+    background-color: #F3EDED;
+    margin-top: 1px;
+  }

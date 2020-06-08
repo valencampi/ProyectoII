@@ -15,7 +15,7 @@ module.exports = {
               res.render('editarResena', {resena})
             })
         .catch(function(error){
-            return res.send(error);
+            res.send('Usuario inexistente, vuelva para atras');
         }) 
      },
 
@@ -34,6 +34,9 @@ module.exports = {
                     .then(()=>{
                         res.redirect('/listado/'+resultado.id)
                     })
+                }
+                else{
+                    res.send('Usuario inexistente, vuelva para atras');
                 }
              })
      }

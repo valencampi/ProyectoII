@@ -52,8 +52,8 @@ module.exports = {
                     }
                 });
                   res.redirect('/');
-            }else{
-                res.send("error")
+            }  else{
+                res.send('Usuario inexistente, vuelva para atras');
             }
         })
     },
