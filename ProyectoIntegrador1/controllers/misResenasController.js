@@ -15,49 +15,20 @@ module.exports = {
         ]
       })
     },
-          
-
-    /*getReviews: function (req,res) {
-      db.Resena.findAll ({
-       where:[
-       {usuario-id: req.params.id}
-      ],
-     include: ["usuario"]
-      })
-     .then(resultado => {
-       res.render('reviews', {resultado:resultado})
-        })
-    },*/
-
-       
+     
 
      confirmuser: function (req, res){
       moduloLogin.validar(req.body.email, req.body.password)
-      .then (resultado =>{
-        if(resultado == undefined){
-          res.send('Usuario inexistente, vuelva para atras');
-          } else{ 
-            res.redirect('/listado/' + resultado.id)
-          }
-        })
-    }
-     
-    
-    /*validar: function (email, pass){
-      return db.Usuario.findOne({
-     where:{ email:email,},
-     })
-     .then(results =>{
+      .then (results =>{
         if(results != null){
-          let chequeo = bcrypt.compareSync(pass,results.password);
-          if(chequeo){ 
-          return results;
-          } else{
-              return undefined;
-                 }
-        }else { return undefined }
-      })*/
-   
+          res.redirect('/listado/' + results.id)
+        
+        } else{
+            res.send('Contraseña incorrecta, vuelva para atras');
+        }
+        })
+    },
+     
+
      
 }
-

@@ -1,4 +1,5 @@
 let db = require('./database/models')
+let bcryptjs = require ('bcryptjs');
 
 let moduloLogin = {
     chequearUsuario: function (email) {
@@ -22,16 +23,21 @@ let moduloLogin = {
             return resultado
         })
     },
+
     validar: function (email, pass) {
         return db.Usuarios.findOne({
             where:{
-                email:email,
-               // password: pass
+                email: email,
+             // password: pass
             },
         })
         .then(results=>{
+            if (results && bcryptjs.compareSync( pass,results.password)) {
             return results;
-        })
+            } else {
+            return null
+            }
+       })
     }
 }
 

@@ -44,18 +44,19 @@ module.exports = {
 
     borrar: function(req,res){
         moduloLogin.validar(req.body.email, req.body.password)
-        .then(function(eliminar){
-            if(eliminar != null){
+        .then(function(results){
+            if(results != null){
                  DB.Resenas.destroy({
                     where: {
                         id: req.params.id
                     }
                 });
                   res.redirect('/');
-            }  else{
-                res.send('Usuario inexistente, vuelva para atras');
+            } else{
+                res.send('Contraseña incorrecta, vuelva para atras');
             }
         })
-    },
+    }
+
 
 }
