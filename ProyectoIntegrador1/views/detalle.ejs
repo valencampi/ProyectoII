@@ -18,13 +18,11 @@
     <nav class="header encabezado">
         <a href="/"> <img class="logo" src="../Mono.jpeg"> </a>
         <ul class="nav">
+          <div class="izq">
           <a href="/">
             <li class="li1">Inicio</li>
           </a>
-          <a href="/registro">
-           <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Registrarse</button>
-          </li> 
-           </a>
+         
            <!-- <a href="/login">
             <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Ingresar</button>
            </li> 
@@ -37,13 +35,19 @@
           </a>
           <a href="/buscadorUsuarios">
           <li class="li1">Buscador de Usuarios</li></a>
+        </div>
+          <div class="derecha">
           <li class="buscador">
             <form class="buscador1" action="/resultado" method="get">
               <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de películas">
               <button type="submit">Buscar</button>
             </form>
           </li>
-          <li class="nombre"> </li>
+          <a href="/registro">
+            <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Registrarse</button>
+           </li> 
+            </a>
+          </div>
         </ul>
       </nav class="header">
 

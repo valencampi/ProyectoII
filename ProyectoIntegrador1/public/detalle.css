@@ -5,22 +5,22 @@
 
 body{
     margin: none !important;
-    position: absolute;
+    
     width: 100%;
-    height: 100%;
+    height: 115%;
 }
-/* 
+ 
 .contenedor{
     height: 100%;
     background-color: black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-header{
+ header{
     background-color: rgb(38, 38, 38);
-    position: absolute;
+    position: absolute !important;
     top: 0px;
     width: 100%;
     height: 15%
@@ -74,14 +74,25 @@ header{
     padding: 15px;
     color: white;
     
-  } */
+  }  
 
+  .buscador1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+  }
+  .resultado{
+    margin: 0px;
+  }
   /* main */
 
   section{
       background-color:rgb(240, 240, 240);
-      width: 95%;
+      width: 95% !important;
+      height: 100%;
       margin: 2%;
+      margin-top: 175px !important;
       border-color: darkgray;  
       border: 3px solid gray;
       border-radius: 15px;
@@ -123,17 +134,21 @@ select.genero{
   footer */
  
 
-  /* footer{
+   footer{
     background-color: whitesmoke;
     position: absolute;
-    bottom: 0px;
+    bottom: 0%;
     width: 100%;
-  } */
-/*
+    height: ;
+  } 
+
   .final{
+      height: 100%;
+      position: absolute;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
      
   }
 
@@ -144,13 +159,16 @@ select.genero{
   .ul2{
       display: flex;
       justify-content: space-between;
-      width: 600px;
+      position: absolute;
+      width: 400px;
       padding: 20px;
-     
+      right: 0px;
+      align-items: center;
+     margin: 0px;
   }
 
   .li2{
       list-style: none;
       font-size: 20px;
       font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  } */
+  } 
