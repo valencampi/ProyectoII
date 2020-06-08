@@ -3,67 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="css/uikit.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit-core-rtl.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="../detalle.css">
+    <link rel="stylesheet" href="../inicio.css">
     <title>Document</title>
 </head>
-<body style="
-margin-top: 0px;
-margin-left: 0px;
-margin-right: 0px;
-margin-bottom: 0px;
-height: 100%;
-">
 <div class="contenedor">
 <header>
     <nav class="header encabezado">
+        <a href="/"> <img class="logo" src="../Mono.jpeg"> </a>
         <ul class="nav">
-         <div class='izq'>
-            <a href="/"> <img class="logo" src="../Mono.jpeg"> </a>
-            <a href="/">
-                <li class="li1">Inicio</li>
-            </a>
-            <a href="/generos">
-                <li class="li1">Géneros</li>
-            </a>
-            <a href="/MisResenas">
-                <li class="li1">Mis reseñas</li>
-              </a>
-        </div>
-        <div class="derecha">
-            <li class="buscador">
-                <form class="buscador1" action="/resultado" method="get">
-                  <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de películas">
-                  <button type="submit">Buscar</button>
-                </form>
-              </li>
-        </div>
-         
-          
+          <a href="/">
+            <li class="li1">Inicio</li>
+          </a>
+          <a href="/registro">
+           <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Registrarse</button>
+          </li> 
+           </a>
+           <!-- <a href="/login">
+            <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Ingresar</button>
+           </li> 
+            </a> -->
+          <a href="/generos">
+            <li class="li1">Géneros</li>
+          </a>
+          <a href="/misResenas">
+            <li class="li1">Mis reseñas</li>
+          </a>
+          <a href="/buscadorUsuarios">
+          <li class="li1">Buscador de Usuarios</li></a>
+          <li class="buscador">
+            <form class="buscador1" action="/resultado" method="get">
+              <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de películas">
+              <button type="submit">Buscar</button>
+            </form>
+          </li>
+          <li class="nombre"> </li>
         </ul>
+      </nav class="header">
+
+    <nav class="mqMobile">
+        <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+                    <a href="/" class="uk-navbar-item uk-logo">
+                        <img src="../Mono.jpeg" class="logoMq" alt="logo" srcset="">
+                    </a>
+                    <li class="nombre"> </li>
+                    <a class="uk-navbar-toggle dis-none h-40" id="navbar_toggle">
+                        <i uk-icon="icon: menu; ratio: 2">
+                          <svg width="40" height="40" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="menu"><rect x="2" y="4" width="16" height="1"></rect><rect x="2" y="9" width="16" height="1"></rect><rect x="2" y="14" width="16" height="1"></rect></svg>
+                        </i>
+
+
+                    </a>
+                    <div class="navbar-collapse" id="navbar_collapse" style="display: block;">
+                        <ul class="uk-navbar-nav">
+                          <ul class="nav">
+                            <a href="/">
+                              <li class="li1">Inicio</li>
+                            </a>
+                            <!-- <li class="logInMq"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Log in</button>
+                            </li> -->
+                            <a href="/generos">
+                              <li class="li1">Géneros</li>
+                            </a>
+                            <a href="/MisResenas">
+                              <li class="li1">Mis reseñas</li>
+                            </a>
+                            <a href="/registro">
+                            <li class='li1'>Crear Usuario</li>
+                           </a>
+                             <!-- <a class="preferidasMq" href="/PeliculasPreferidas">
+                              <li class="li1" >Mis películas preferidas</li>
+                            </a> -->
+                            <li class="buscador">
+                              <form class="buscador1" action="/resultado" method="get">
+                                <input type="search" name="buscador" class="resultado" placeholder="Buscador">
+                                <button type="submit" class="botonBuscar">Buscar</button>
+                              </form>                                
+                            </li>
+                          </ul>
+                        </ul>
+                    </div>
+                </div>
+          </nav>
         </nav>
+
 </header>
-    <main>
-    <h1>Estas viendo el perfil del usuario: <%= usuario.nombre %></h1>
+    <section>
+    <h1 class="perfil">Estas viendo el perfil del usuario: <%= usuario.nombre %></h1>
     
     <ul>
         <div class="datos">
+            <h3>Información:</h3>
             <li class="dato">Email: <%= usuario.email %></li>
             <li class="dato">Fecha de nacimiento: <%= usuario.fecha_de_nacimiento %></li>
-            <li class="dato"> Género Favorito:<a href="/pelicularPorGenero?idgenero=  <%= usuario.id_genero %>"><%= usuario.id_genero %></a> </li>
+            <li class="dato"> Género favorito: <a href="/pelicularPorGenero?idgenero=<%= usuario.id_genero %>&name="> 
+             <%= usuario.id_genero %> </a> </li>
         </div>
         <% if(usuario.resenas.length !=0){%>
         <h3>Resenas:</h3>
         <% for (let i = 0; i < usuario.resenas.length; i++) { %> 
-            <h3> Pelicula: <%= usuario.resenas[i].id_Pelicula %> |<a href="/peliculas?id=<%=  usuario.resenas[i].id_Pelicula %>">  Ver peliucla</a></h3>
-            <p><%=  usuario.resenas[i].texto %> </p>
-            <h3><%= usuario.resenas[i].puntaje %> </h3>
-            <br>
+            <li class="dato"> Película: <%= usuario.resenas[i].id_Pelicula %> |<a href="/peliculas?id=<%=  usuario.resenas[i].id_Pelicula %>"> Ver película</a></li>
+            <p><%=usuario.resenas[i].texto %> </p>
+            <li class="dato">Puntaje: <%= usuario.resenas[i].puntaje %> </li>
+            <hr class="color">
         <% }%> 
         <% }else{ %> 
-            <h3>Este usuario no tiene reseñas</h3>
+            <p>Este usuario no tiene reseñas</p>
             <% }%>
     </ul>
-    </main>
+</section>
     <footer>
         <nav class="final">
             <img class="movie" src="../logomovies.png" alt="">
