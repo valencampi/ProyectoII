@@ -4,11 +4,12 @@
 
 
 /* formulario */
-body{
+ body{
   position: absolute;
   height: 100%;
   width: 100%;
 }
+
 .formulario{
     background-color: floralwhite;
     position: absolute;
@@ -24,9 +25,15 @@ body{
    
 }
 
-.container {
-    padding: 16px;
-  }
+.li2 {
+  font-size: small !important;
+ }
+
+ .movie {
+  size: 5px !important;
+  height: 60% !important;
+}
+
 
   input[type=email], input[type=password] {
     width: 95.5%;
