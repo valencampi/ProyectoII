@@ -4,7 +4,7 @@ const moduloLogin = require ('../ModuloLogin.js')
 
 module.exports = {
     index: function (req, res){
-        
+        res.render('peliculas')
        },  
 
     //crear una resena
