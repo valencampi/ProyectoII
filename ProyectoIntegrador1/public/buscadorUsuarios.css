@@ -5,7 +5,8 @@
 /* header */
 header{
     overflow: hidden;
-    position: relative;
+    position: absolute;
+    height: 12%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -24,6 +25,8 @@ header{
     position: fixed;
     width: 100%;
     height: 15%;
+
+    align-items: center;
   }
   
   .header{
@@ -84,7 +87,10 @@ header{
   }
 /* body */
   body{
-     margin: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      margin: 0;
       display: flex;
       flex-flow: column;
       justify-content: space-between;
@@ -132,8 +138,8 @@ header{
   
   /* cuerpo */
 main{ 
-    margin-top:100px;
-    height: 475px;
+   
+    height: 100%;
     display: flex;
     align-items:center ;
     justify-content: center;
@@ -143,8 +149,9 @@ main{
 .buscadorUsuarios{
     display: flex;
     justify-content: center;
+    margin-top: 5%;
     width: 60%;
-    height: 80%;
+    height: 50%;
     align-items: center;
     background-color: rgb(204, 204, 204);
 }
@@ -169,18 +176,21 @@ main{
   /* footer */
   footer{
     overflow: hidden;
+    position: absolute;
     width: 100%;
-    height: 50px;
-    
+    height: 10%;
+    bottom: 0px;
     left: 0;
-    background-color: #F3EDED;
     margin-top: 1px;
+    margin-bottom: 0px;
   }
   
   .final{
-    background-color: white;
+    background-color: #F3EDED;
     display: flex;
     justify-content: space-between;
+    height: 100%;
+    align-items: center;
   }
   
   .li2 {
@@ -193,12 +203,15 @@ main{
     padding-right: 5px;
     font-size: 11px;
     font-weight: bold;
+    margin-bottom: 0px;
+  }
+  .ul2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .movie {
-    height: 40px;
-    
-    top: 9px;
-    left: 5px;
+    height: 80%;
+    margin-bottom: 0px;
   }
-  
