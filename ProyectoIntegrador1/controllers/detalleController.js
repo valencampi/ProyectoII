@@ -14,10 +14,10 @@ module.exports = {
         })
        },
 
-   detalle:  function(req, res) {
+   detalle: function(req, res) {
        //return res.send("el id de usuario es " + req.params.id)
        DB.Usuarios.findByPk(req.params.id, {
-           include: [ "resenas"]
+           include: ["resenas"]
        })
        .then (function (usuario){
           // return res.send(usuario)
