@@ -13,5 +13,4 @@ router.post('/reviews', usersController.confirmuser);
 router.get('/reviews/editar/:id', usersController.mostrarEditar);
 
 
-
 module.exports = router;

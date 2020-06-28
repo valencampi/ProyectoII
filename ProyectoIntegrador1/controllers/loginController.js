@@ -7,14 +7,3 @@ module.exports = {
       res.render('login')
      },
 }
-
-
- //  loggeado: (req, res) => {   
-    //   DB.usuarios.(req.body)
-    //   .then(function(index){
-    //     return res.redirect('/')
-    //   })
-    //   .catch(function(error){
-    //     return res.send(error);
-    // }) 
-    // },

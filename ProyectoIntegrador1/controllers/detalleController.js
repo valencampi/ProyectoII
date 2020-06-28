@@ -1,6 +1,5 @@
 const DB = require('../database/models');
 const OP = DB.Sequelize.Op;
-// const bcrypt = require('bcryptjs');
 const fetch = require('node-fetch')
 
 module.exports = {
@@ -32,5 +31,3 @@ module.exports = {
     }
     
 }
-
-

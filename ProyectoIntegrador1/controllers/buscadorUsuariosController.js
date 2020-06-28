@@ -1,6 +1,5 @@
 const DB = require('../database/models');
 const OP = DB.Sequelize.Op;
-// let bcryptjs = require ('bcryptjs');
 
 module.exports = {
     index: function(req, res) {
